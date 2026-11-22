@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-page="cleverscore-project">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Try CleverScore, a 3D-printed LED scoreboard for table tennis.">
+    <title>CleverScore · Table tennis scoreboard</title>
+    <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
+    <link rel="preload" href="./fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./site.css">
+  </head>
+  <body>
+    <header class="site-header wrap">
+      <a class="brand" href="./">
+        <img src="./app-icon.svg" width="34" height="34" alt="">
+        CleverScore
+      </a>
+      <div class="preferences">
+        <label class="sr-only" for="site-language" data-text="site.language">Language</label>
+        <select id="site-language">
+          <option value="en" lang="en">English</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="es" lang="es">Español</option>
+          <option value="pt" lang="pt">Português</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="zh" lang="zh">中文</option>
+          <option value="ja" lang="ja">日本語</option>
+          <option value="cs" lang="cs">Čeština</option>
+          <option value="hu" lang="hu">Magyar</option>
+          <option value="ro" lang="ro">Română</option>
+          <option value="ru" lang="ru">Русский</option>
+        </select>
+        <label class="sr-only" for="site-theme" data-text="site.theme">Color scheme</label>
+        <select id="site-theme">
+          <option value="system" data-text="site.theme.system">System</option>
+          <option value="light" data-text="site.theme.light">Light</option>
+          <option value="dark" selected data-text="site.theme.dark">Dark</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero" aria-labelledby="site-headline">
+        <p class="project-status" data-text="site.projectStatus">Project in development</p>
+        <h1 id="site-headline" data-text="site.headline">Affordable scoreboard for all clubs</h1>
+        <p class="practice-description" data-text="site.practiceDescription">Try the current web app and practice scoring, even without a scoreboard.</p>
+        <a class="open-app" href="../cs/" data-text="site.open">Open Web App</a>
+      </section>
+
+      <ul class="features" role="list">
+        <li>
+          <span data-text="site.featureBrowser">Controlled from a web browser</span>
+          <a class="feature-compatibility" href="https://developer.mozilla.org/de/docs/Web/API/Web_Bluetooth_API#browser-kompatibilit%C3%A4t"
+            target="_blank" rel="noopener noreferrer">
+            <span data-text="site.seeCompatibility">See compatibility</span>
+            <span aria-hidden="true">↗</span>
+            <span class="sr-only" data-text="site.newTab">(opens in a new tab)</span>
+          </a>
+        </li>
+        <li data-text="site.featurePower">Powered by an external power bank or a laptop, tablet, or phone</li>
+        <li data-text="site.featurePrint">3D-printed with the option to add your club’s name</li>
+        <li data-text="site.featureEase">Easy to use</li>
+        <li data-text="site.featureStats">Shows statistics when the match ends</li>
+        <li data-text="site.featureTeam">Team scoring in the full web app</li>
+        <li data-text="site.featurePlacement">Set it on a table or hang it where the whole hall can see it</li>
+      </ul>
+
+      <section class="visibility" aria-labelledby="visibility-title">
+        <h2 id="visibility-title" data-text="site.visibilityTitle">Visible from over 30 meters away in all lighting conditions.</h2>
+        <img src="./images/cs-light.webp" width="1376" height="768"
+          loading="lazy" decoding="async" alt="CleverScore showing 3–3 in a brightly lit sports hall." data-alt="site.daylightAlt">
+      </section>
+
+      <section class="connect" aria-labelledby="connect-title">
+        <div class="connect-copy">
+          <h2 id="connect-title" data-text="site.connectTitle">Connect your scoreboard.</h2>
+          <p id="connect-description" data-text="site.connectDescription">Use a phone, tablet, or computer with a Web Bluetooth browser.</p>
+        </div>
+        <div class="browser-guide">
+          <p class="browser-hint" id="ble-hint" data-text="site.bleHint" hidden>Bluetooth pairing is unavailable in this browser.</p>
+          <dl>
+            <div>
+              <dt>Windows / macOS</dt>
+              <dd>Chrome, Edge</dd>
+            </div>
+            <div>
+              <dt>Linux</dt>
+              <dd>Chrome <small data-text="site.linuxExperimental">(experimental)</small></dd>
+            </div>
+            <div>
+              <dt>ChromeOS</dt>
+              <dd>Chrome</dd>
+            </div>
+            <div>
+              <dt>Android</dt>
+              <dd>Chrome, Samsung Internet, Opera</dd>
+            </div>
+            <div>
+              <dt>iPhone / iPad</dt>
+              <dd><a href="https://apps.apple.com/app/bluefy-web-ble-browser/id1492822055">Bluefy</a></dd>
+            </div>
+          </dl>
+          <a class="browser-help" href="https://developer.mozilla.org/de/docs/Web/API/Web_Bluetooth_API#browser-kompatibilit%C3%A4t"
+            target="_blank" rel="noopener noreferrer">
+            <span data-text="site.bleCompatibility">Web Bluetooth browser compatibility</span>
+            <span aria-hidden="true">↗</span>
+            <span class="sr-only" data-text="site.newTab">(opens in a new tab)</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap">
+      <span data-text="site.interest">Interested in the project?</span>
+      <a href="mailto:cleverscore@codres.de" data-text="site.email">Email CleverScore</a>
+    </footer>
+    <script type="module">
+      import { mountSite } from './site.js'
+      mountSite(document)
+    </script>
+  </body>
+</html>
